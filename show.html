@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻页面</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		img{
+			position: absolute;
+			transition: left 5s linear, top 5s linear;
+			z-index: 3;
+			opacity: 0.5;
+		}
+	</style>
+</head>
+<body>
+	<img id="target" src="./qiqiu.jpg" alt="" width="150px" height="170px">
+	<div class="container">
+		<div class="top-img">
+		<div class="loginout"><a href="loginout.php">退出系统</a></div>
+			<div class="title">新闻发布系统</div>
+			<div class="nav">
+				<a href="./index.php">返回首页</a>
+			</div>
+		</div>
+		<div class="main">
+			<div class="news-title"><h2><?php echo $data['title']; ?></h2></div><hr>
+			<div class="news-time"><p><?php echo $data['addtime']; ?></p></div>
+			<div class="news-content"><p><?php echo $data['content']; ?></p></div>
+		</div>
+	</div>
+	<script>
+		var trs = document.getElementById('target');
+		trs.style.left='0px';
+		trs.style.top='0px';
+		document.onmousedown=function(event){
+			trs.style.left=event.pageX+'px';
+			trs.style.top=event.pageY+'px';
+		}
+	</script>
+</body>
+</html>

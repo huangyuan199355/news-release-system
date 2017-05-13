@@ -1,0 +1,52 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei";
+}
+body{
+	background: url('bg.png');
+}
+.container{
+	position: relative;
+	top: 150px;
+	width: 300px;
+	height: 250px;
+	border: 2px solid gray;
+	margin: auto;
+	background: url('bg.png');
+	border-radius: 5px;
+}
+.container p{
+	color:gray;
+	text-align: center;
+	font-size: 25px;
+	line-height: 60px;
+}
+.login{
+	position: relative;
+	left: 40px;
+}
+.login th{
+	vertical-align: top;
+	color:gray;
+	padding-bottom: 15px;
+}
+.login td{
+	padding-bottom: 15px;
+	height: 30px;
+}
+.login input{
+	border-radius:4px;
+	border:2px solid gray;
+}
+.login input:hover{
+	background: #E0EEEE;
+}
+.login input[type=submit]{
+	width: 60px;
+	position: relative;
+	left: 90px;
+}
+.login input[type=submit]:hover{
+	background: #98FB98;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻发布系统</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		
+		<div class="top-img">
+			<div class="loginout"><a href="loginout.php">退出系统</a></div>
+			<div class="title">新闻发布系统</div>
+			<div class="nav">
+				<a href="./add.php">添加新闻</a>
+			</div>
+		</div>
+		<div class="main">
+				<table class="news">
+					<tr><th width="260">新闻标题</th><th>发布时间</th><th>操作</th></tr>
+					<?php foreach($data as $v): ?>
+						<tr>
+						<td class="td td1"><a href="./show.php?id=<?php echo $v['id']; ?>"><?php echo $v['title'];?></a></td>
+						<td class="td td2"><?php echo $v['addtime']; ?></td>
+						<td class="td td3"><a href="./edit.php?id=<?php echo $v['id']; ?>">编辑</a><a href="del.php?id=<?php echo $v['id']; ?>" onclick="confirm('确认要删除该新闻吗？')">删除</a></td>
+						</tr>
+					<?php endforeach; ?>
+				</table>
+			<div class="page"><?php echo $page_html; ?></div>
+	</div>
+</body>
+</html>
